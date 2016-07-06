@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
   has_many :courses, through: :user_courses
   has_many :user_subjects, dependent: :destroy
   has_many :subjects, through: :user_subjects
+  has_many :reports, dependent: :destroy
 
   validates :name,  presence: true, length: {maximum: 50}
   validates :email, presence: true, length: {maximum: 255},

@@ -1,0 +1,29 @@
+<div class="col-md-4">
+  <h1><%= t "reports.create" %></h1>
+  <%= form_for @report do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="field">
+      <%= f.text_area :content %>
+    </div>
+    <%= f.submit t("button.submit"), class: "btn btn-primary" %>
+  <% end %>
+</div>
+<div class="col-md-8">
+  <h1><%= t "reports.all" %></h1>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th><%= t "reports.content" %></th>
+        <th><%= t "reports.time" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @reports.each do |report| %>
+        <tr>
+          <td><%= report.content %></td>
+          <td><%= time_ago_in_words report.created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

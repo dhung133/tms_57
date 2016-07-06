@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update] do
     resources :relationships, only: [:index]
   end
+  resources :reports, only: [:index, :create]
   resources :relationships, only: [:create, :destroy]
   resources :courses, only: [:index, :show] do
     resources :user_subjects, only: [:show, :update] do

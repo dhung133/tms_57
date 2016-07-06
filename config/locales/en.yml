@@ -115,7 +115,7 @@ en:
     is_not_started: "This course is not started yet"
     start: "start"
     active: "Your Active Course"
-    course_finished: "Finished Course"
+    course_finished: "Your Other Courses"
   user:
     profile: "Profile"
     dashboard: "Dashboard"
@@ -147,3 +147,11 @@ en:
     unfollow: "unfollowed"
   course_show:
     line: "------"
+  reports:
+    create: "Create Report"
+    success: "Create Report Successful"
+    fail: "Cannot Create Report"
+    created: "Report created"
+    ago: "ago"
+    index: "Reports"
+    all: Your Reports
